@@ -3,19 +3,22 @@ import { ethers } from "hardhat";
 // !!! ВАЖНО !!!
 // 1. Сначала запустите скрипт deploy-contracts.ts.
 // 2. Замените адреса-плейсхолдеры на адреса, полученные после деплоя.
-const MY_NFT_ADDRESS = "YOUR_MY_NFT_CONTRACT_ADDRESS";
-const NFT_SALE_ADDRESS = "YOUR_NFT_SALE_CONTRACT_ADDRESS";
+const MY_NFT_ADDRESS = "0x7F90f7B124710D87Fb7237760F992778c98bBEA8";
+const NFT_SALE_ADDRESS = "0xBAf5AA83FfEc70dd50339435354F01bc7C37FFCc";
 
 /**
  * Массив URI для метаданных NFT, которые вы хотите создать.
  * Каждый URI должен указывать на JSON-файл, соответствующий стандарту метаданных ERC721.
  * Например: "ipfs://bafkre..." или "https://..."
+ * Здесь просто ссылки на картинки в этом же репо :)
  */
 const TOKEN_URIS: string[] = [
-  // Пока что массив пуст, как и было запрошено.
-  // Примеры для заполнения:
-  // "https://gateway.pinata.cloud/ipfs/Qm...",
-  // "https://gateway.pinata.cloud/ipfs/Qm...",
+  "https://raw.githubusercontent.com/rightjelkin/lecture-20.06.25/c33b6e9e99906407131feabe21c9538719f06e70/contracts/nft-images/1.png",
+  "https://raw.githubusercontent.com/rightjelkin/lecture-20.06.25/c33b6e9e99906407131feabe21c9538719f06e70/contracts/nft-images/2.png",
+  "https://raw.githubusercontent.com/rightjelkin/lecture-20.06.25/c33b6e9e99906407131feabe21c9538719f06e70/contracts/nft-images/3.png",
+  "https://raw.githubusercontent.com/rightjelkin/lecture-20.06.25/c33b6e9e99906407131feabe21c9538719f06e70/contracts/nft-images/4.png",
+  "https://raw.githubusercontent.com/rightjelkin/lecture-20.06.25/c33b6e9e99906407131feabe21c9538719f06e70/contracts/nft-images/5.png",
+  "https://raw.githubusercontent.com/rightjelkin/lecture-20.06.25/c33b6e9e99906407131feabe21c9538719f06e70/contracts/nft-images/6.png"
 ];
 
 async function main() {
